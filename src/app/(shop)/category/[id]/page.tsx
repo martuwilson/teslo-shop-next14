@@ -1,10 +1,25 @@
-/* eslint-disable react/display-name */
-/* eslint-disable import/no-anonymous-default-export */
-export default function(){
+import { notFound } from "next/navigation";
+
+
+interface Props {
+  params:{
+    id: string;
+  }
+}
+
+
+export default function( {params}: Props ){
+
+  const {id} = params
+
+  if(id === 'kids'){
+    notFound()
+  }
+
     return (
         <div>
           <h1>
-            Cartegory page
+            Cartegory page {id}
           </h1>
         </div>
       );

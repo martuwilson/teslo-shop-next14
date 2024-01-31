@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    // Agrega o modifica reglas según tus necesidades
+    "react/display-name": "off",
+    "import/no-anonymous-default-export": "off"
+  }
 }
