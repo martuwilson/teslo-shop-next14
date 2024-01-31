@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="">
       <h1>
         Testing
       </h1>
@@ -12,6 +12,6 @@ export default function Home() {
       >
         Hola mundo
       </h1>
-    </main>
+    </div>
   );
 }
