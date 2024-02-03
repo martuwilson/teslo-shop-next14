@@ -1,4 +1,5 @@
 import { Product } from "@/interfaces"
+import { ProductGridItem } from "./ProductGridItem";
 
 interface Props {
     products: Product[];
@@ -11,9 +12,10 @@ export const ProductGrid = ({products}: Props) => {
     >
         {
             products.map(product => (
-                <span key={product.slug}>
-                    {product.title}
-                </span>
+                <ProductGridItem
+                    key={product.slug}
+                    product={product}
+                />
             ))
         }
     </div>
