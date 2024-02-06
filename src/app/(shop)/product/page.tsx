@@ -1,8 +1,9 @@
-/* eslint-disable react/display-name */
-/* eslint-disable import/no-anonymous-default-export */
+
+
+
 export default function(){
     return (
-        <div className="min-h-screen bg-red-400">
+        <div className="min-h-screen">
           <h1>
             many products page
           </h1>
