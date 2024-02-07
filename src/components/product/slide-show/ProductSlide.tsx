@@ -37,6 +37,7 @@ export const ProductSlide = ( { images, title, className }: Props ) => {
         style={ {
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
+          height: '70%'
         } as React.CSSProperties
         }
         spaceBetween={ 10 }
