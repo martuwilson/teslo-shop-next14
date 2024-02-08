@@ -77,7 +77,7 @@ export default function(){
 
               {/* checkout */}
 
-              <div className="bg-white rounded-xl shadow-xl p-7">
+              <div className="bg-white rounded-xl shadow-xl p-7 h-[300px]">
                 <h2 className="text-2xl mb-2">
                   Resumen de compra
                 </h2>
