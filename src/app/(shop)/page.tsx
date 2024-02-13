@@ -1,12 +1,25 @@
 import { ProductGrid, Title } from "@/components";
 import { initialData } from "@/seed/seed";
 import { getPaginatedProductsWithImages } from '../../actions/products/product-pagination';
+import { redirect } from "next/navigation";
  
 
-export default async function Home() {
+interface Props {
+  searchParams: {
+    page?: string
+  }
+}
 
-  const products = await getPaginatedProductsWithImages();
 
+export default async function Home({searchParams}: Props) {
+
+  const page = searchParams.page ? parseInt(searchParams.page) : 1;
+
+  const {products} = await getPaginatedProductsWithImages({page});
+
+  if (!products.length) {
+    redirect("/"); // si no hay mas productos redirigir a la pagina principal
+  }
 
   return (
     <>
@@ -16,7 +29,7 @@ export default async function Home() {
         className="mb-2"
       />
 
-      <ProductGrid products={products.products} />
+      <ProductGrid products={products} />
     </>
   );
 }
