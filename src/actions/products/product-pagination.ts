@@ -30,7 +30,7 @@ export const getPaginatedProductsWithImages = async ({
           },
         },
       },
-      //! Por género
+      //! Filtro Por género
       where: {
         gender: gender,
       },
