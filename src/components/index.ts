@@ -17,3 +17,5 @@ export * from './product/slide-show/MobileSlide'
 
 export * from './ui/footer/Footer';
 export * from './ui/pagination/Pagination';
+
+export * from './product/in-stock/Stock';

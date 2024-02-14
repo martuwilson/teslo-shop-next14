@@ -1,8 +1,8 @@
 
-export const revalidate = 10080; // 7 days
+export const revalidate = 604800; // 7 days
 
 import { getProductSlug } from "@/actions";
-import { MobileSlide, ProductSlide, QuantitySelector, SizeSelector } from "@/components";
+import { MobileSlide, ProductSlide, QuantitySelector, SizeSelector, StockLabel } from "@/components";
 import { titleFont } from "@/config/fonts";
 import { initialData } from "@/seed/seed";
 import { notFound } from "next/navigation";
@@ -47,6 +47,7 @@ export default async function ProductBySlug({params}: ProductPageProps){
           {/* detalles de producto */}
 
           <div className="col-span-1 px-5">
+            <StockLabel slug={product.slug}/>
             <h1 className={`${titleFont.className} antialiased font-bold text-xl`}>
               {product.title}
             </h1>
