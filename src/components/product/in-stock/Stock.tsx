@@ -24,11 +24,22 @@ export const StockLabel = ({slug}: StockProps) =>{
         console.log(inStock)
 
         setStock(inStock)
+        setIsLoading(false)
     };
 
     return(
-        <h1 className={`${titleFont.className} antialiased font-bold text-xl`}>
-              Stock: {stock}
+        <>
+      {isLoading ? (
+        <h1
+          className={` ${titleFont.className} antialiased font-bold text-lg bg-gray-200 animate-pulse `}
+        >
+          &nbsp;
         </h1>
+      ) : (
+        <h1 className={` ${titleFont.className} antialiased font-bold text-lg`}>
+          Stock: {stock}
+        </h1>
+      )}
+    </>
     )
 }
