@@ -1,3 +1,4 @@
+import { SizeSelector } from "@/components";
 import { titleFont } from "@/config/fonts";
 import { initialData } from "@/seed/seed";
 import { notFound } from "next/navigation";
@@ -34,7 +35,10 @@ export default function({ params }: Props) {
             </p>
 
             {/* selector de talles */}
-
+            <SizeSelector 
+                selectedSize={product.sizes[0]} 
+                availableSizes={product.sizes}
+            />
             {/* selec cantidad */}
 
             <button className="btn-primary my-5">
